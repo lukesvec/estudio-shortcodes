@@ -1,0 +1,45 @@
+if($(window).width()<540) { 
+    $('.hpintro').each(function() {
+    var $container = $(this),
+      effect     = $container.data('slider-effect') || 'slide',
+      speed      = $container.data('slider-speed')  || 700,
+      delay      = $container.data('slider-delay')  || 7000;
+    $container.bjqs({
+      animtype      : effect, // slide, fade
+      animduration  : speed,
+      animspeed     : delay,
+      responsive    : true,
+      width         : $(".aida-slider").width(),
+      height        : 220,
+      showcontrols  : false,
+      centermarkers : true,
+      randomstart   : true,
+      // showmarkers   : false
+    });
+  });
+} else {  
+  $('.hpintro').each(function() {
+    var $container = $(this),
+      effect     = $container.data('slider-effect') || 'slide',
+      speed      = $container.data('slider-speed')  || 600,
+      delay      = $container.data('slider-delay')  || 6000;
+    $container.bjqs({
+      animtype      : effect, // slide, fade
+      animduration  : speed,
+      animspeed     : delay,
+      responsive    : true,
+      /*
+      width         : 1160,
+      height        : 450,
+      */
+      width: $(".aida-slider").width(),
+      height: $(".aida-slider").width() /2.88,
+      // width         : "100%",
+      // height        : 660,
+      showcontrols  : false,
+      centermarkers : false,
+      randomstart   : true,
+      // showmarkers   : false
+    });
+  });
+}
