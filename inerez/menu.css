@@ -1,0 +1,229 @@
+.menu-wrapper {
+  width: 100%;
+  float: left;
+  position: relative;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective-origin: 50% 200%;
+  -webkit-perspective-origin: 50% 200%;
+  -moz-perspective-origin: 50% 200%;
+  
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 500;
+}
+.menu-wrapper:first-child {
+  margin-right: 100px;
+}
+.menu-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.25);
+}
+.menu-wrapper li {
+  position: relative;
+  background: none;
+  padding: 0px;
+  margin: 0px;
+  border-top: 1px solid #4190bb;
+}
+.menu-wrapper li a {
+  display: block;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+}
+.menu-wrapper li a:hover {
+	text-decoration: underline;
+}
+.menu-wrapper li.menu-back > a {
+  padding-left: 15px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.menu-wrapper li > a:after {
+  right: 10px;
+  color: rgba(0, 0, 0, 0.15);
+}
+.menu-wrapper .main-menu {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+}
+.menu-wrapper li .submenu {
+  display: none;
+}
+.main-menu.subMenuView li,
+.main-menu.subMenuView li.subMenuOpen > a,
+.main-menu.subMenuView li.subMenuView > a {
+  display: none;
+}
+.main-menu.subMenuView li.subMenuView,
+.main-menu.subMenuView li.subMenuView .submenu,
+.main-menu.subMenuView li.subMenuOpen,
+.main-menu.subMenuView li.subMenuOpen > .submenu,
+.main-menu.subMenuView li.subMenuOpen > .submenu > li {
+  display: block;
+}
+.menu-wrapper > .submenu {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  margin: 0;
+}
+.main-menu.animate-out {
+  -webkit-animation: MenuAnimOut4 0.4s ease;
+  -moz-animation: MenuAnimOut4 0.4s ease;
+  animation: MenuAnimOut4 0.4s ease;
+}
+@-webkit-keyframes MenuAnimOut4 {
+  100% {
+    -webkit-transform: translateZ(-300px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes MenuAnimOut4 {
+  100% {
+    -moz-transform: translateZ(-300px);
+    opacity: 0;
+  }
+}
+@keyframes MenuAnimOut4 {
+  100% {
+    transform: translateZ(-300px);
+    opacity: 0;
+  }
+}
+.main-menu.animate-in {
+  -webkit-animation: MenuAnimIn4 0.4s ease;
+  -moz-animation: MenuAnimIn4 0.4s ease;
+  animation: MenuAnimIn4 0.4s ease;
+}
+@-webkit-keyframes MenuAnimIn4 {
+  0% {
+    -webkit-transform: translateZ(-300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes MenuAnimIn4 {
+  0% {
+    -moz-transform: translateZ(-300px);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@keyframes MenuAnimIn4 {
+  0% {
+    transform: translateZ(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+.menu-wrapper > .submenu.animate-in {
+  -webkit-animation: SubMenuAnimIn4 0.4s ease;
+  -moz-animation: SubMenuAnimIn4 0.4s ease;
+  animation: SubMenuAnimIn4 0.4s ease;
+}
+@-webkit-keyframes SubMenuAnimIn4 {
+  0% {
+    -webkit-transform: translateZ(300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@-moz-keyframes SubMenuAnimIn4 {
+  0% {
+    -moz-transform: translateZ(300px);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+@keyframes SubMenuAnimIn4 {
+  0% {
+    transform: translateZ(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+}
+.menu-wrapper > .submenu.animate-out {
+  -webkit-animation: SubMenuAnimOut4 0.4s ease;
+  -moz-animation: SubMenuAnimOut4 0.4s ease;
+  animation: SubMenuAnimOut4 0.4s ease;
+}
+@-webkit-keyframes SubMenuAnimOut4 {
+  0% {
+    -webkit-transform: translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(300px);
+    opacity: 0;
+  }
+}
+@-moz-keyframes SubMenuAnimOut4 {
+  0% {
+    -moz-transform: translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translateZ(300px);
+    opacity: 0;
+  }
+}
+@keyframes SubMenuAnimOut4 {
+  0% {
+    transform: translateZ(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(300px);
+    opacity: 0;
+  }
+}
+.menu-wrapper button {
+  background: #517F76;
+}
+.menu-wrapper button:hover,
+.menu-wrapper button.menu-btn-active,
+.menu-wrapper ul {
+  background: #257fb1;
+}
+.fa-caret-right {
+  position: relative;
+  float: right;
+  top: 4px;
+  color: white;
+}
+.fa-caret-left {
+  padding-right: 5px;
+}
